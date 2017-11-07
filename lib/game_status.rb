@@ -20,6 +20,8 @@ def won?(board)
     winning_combo.each do |win_index|
       if board[win_index] == "X"
         return winning_combo
+      elsif board[win_index] == "O"
+        return winning_combo
       else
         return false
       end
