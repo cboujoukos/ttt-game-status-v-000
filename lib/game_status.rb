@@ -46,3 +46,7 @@ end
 def over?(board)
   won?(board) || draw?(board)
 end
+
+def winner(board)
+  return winning_combo[0]
+end
