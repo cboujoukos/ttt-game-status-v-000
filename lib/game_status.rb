@@ -17,14 +17,20 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.select do |winning_combo|
-    winning_combo.each do |win_index|
-      if board[win_index] == "X"
-        return winning_combo
-      elsif board[win_index] == "O"
-        return winning_combo
-      else
-        return false
-      end
+    win_index_1 = winning_combo[0]
+    win_index_2 = winning_combo[1]
+    win_index_3 = winning_combo[2]
+
+    position_1 = board[win_index_1]
+    position_2 = board[win_index_2]
+    position_3 = board[win_index_3]
+
+    if position_1 == "X" && position_2 == "X" && position_3 == "X"
+      return winning_combo
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+      return winning_combo
+    else
+      return false
     end
   end
 end
