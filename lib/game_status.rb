@@ -20,7 +20,7 @@ def won?(board)
     winning_combo.select do |win_index|
       board[win_index].all? == "X"
     end
-        
+
     #win_index_1 = winning_combo[0]
     #win_index_2 = winning_combo[1]
     #win_index_3 = winning_combo[2]
